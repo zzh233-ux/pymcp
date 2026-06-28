@@ -1,0 +1,12 @@
+{
+    "BRIDGE_PIPE_NAME": "\\\\.\pipe\\AutoLinkerBridge",
+    "MCP_HOST": "127.0.0.1",
+    "MCP_PORT": 19207,
+    "MCP_PATH": "/mcp",
+    "TOOL_TIMEOUT": 60,
+    "COMPILE_TIMEOUT": 300,
+    "CONNECT_TIMEOUT": 5.0,
+    "HEALTH_CHECK_INTERVAL": 10,
+    "TAVILY_API_KEY": "",
+    "HTTP_USER_AGENT": "AutoLinker-MCP/1.0"
+}
