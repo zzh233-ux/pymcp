@@ -7,7 +7,7 @@
     ├── 本地工具 (无需 IDE):
     │   run_powershell_command / search_web_tavily / fetch_url / extract_web_document
     └── IDE 工具 (转发到 C++ 桥接):
-        ↓ 命名管道 \\.\pipe\AutoLinkerBridge
+        ↓ 命名管道 \\\\.\\pipe\\AutoLinkerBridge
       C++ 桥接插件 (IDE 进程内)
         ↓ SendMessage → IDE 主线程
       IDEFacade / EideInternalTextBridge / WorkspaceMirror
