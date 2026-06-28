@@ -4,7 +4,10 @@ on:
   push:
     branches: [main]
     paths:
-      - 'McpFne/**'
+      - 'McpFne.vcxproj'
+      - 'src/**'
+      - 'elib/**'
+      - 'thirdparty/**'
       - '.github/workflows/build.yml'
   workflow_dispatch:
 
@@ -18,12 +21,11 @@ jobs:
         uses: microsoft/setup-msbuild@v2
 
       - name: Build
-        working-directory: McpFne
         run: msbuild McpFne.vcxproj /t:Build /p:Configuration=Release_E /p:Platform=Win32 /m /v:minimal
 
       - name: Upload fne
         uses: actions/upload-artifact@v4
         with:
           name: McpFne-fne
-          path: McpFne/bin/Release_E/McpFne.fne
+          path: bin/Release_E/McpFne.fne
           if-no-files-found: error
